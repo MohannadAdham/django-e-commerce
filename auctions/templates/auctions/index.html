@@ -2,6 +2,9 @@
 
 {% block body %}
     <h2>Active Listings</h2>
-
-    TODO
+    {% for listing in listings %}
+        <div class="listingTitle">{{ listing.title }}</div>
+        <div class="listingPrice">{{ listing.price }}</div>
+        <div class="listingDate">Created {{ listing.creation_date "r" }}</div>
+    {% endfor %}
 {% endblock %}
