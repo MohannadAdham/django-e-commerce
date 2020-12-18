@@ -4,7 +4,7 @@
     <h2>Active Listings</h2>
     {% for listing in listings %}
         <div class="listingTitle">{{ listing.title }}</div>
-        <div class="listingPrice">{{ listing.price }}</div>
-        <div class="listingDate">Created {{ listing.creation_date "r" }}</div>
+        <div class="listingPrice">{{ listing.price }}$</div>
+        <div class="listingDate">Created {{ listing.creation_date|date:"D d M Y" }} {{ listing.creation_date|time:"H:i" }}</div>
     {% endfor %}
 {% endblock %}
